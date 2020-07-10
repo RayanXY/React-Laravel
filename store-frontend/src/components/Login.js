@@ -46,17 +46,37 @@ class Login extends React.Component {
    render() {
 
       return (
-         <div>
-            <label>E-mail:
-               <input type="text" name="email" onChange={this.handleChange.bind(this)} />
-            </label>
-            <br />
-            <label>Senha:
-               <input type="password" name="password" onChange={this.handleChange.bind(this)} />
-            </label>
-            <br />
-            <button onClick={this.handleSubmit}>Entrar!</button>
-            <Link to="/Cadastros"><button>Sign Up!</button></Link>
+         <div className="flex items-center justify-center h-screen">
+            <div className="bg-white shadow-md px-6 pt-6 pb-8 mb-4">
+               <h1 className="text-center text-gray-700 text-xl font-bold -mt-2 mb-1">LOGIN</h1>
+               <div className="mb-4">
+                  <label className="block text-gray-700 text-base font-bold mb-2">
+                     E-mail
+                  </label>
+                  <input
+                    className="shadow appeareance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text" name="email" onChange={this.handleChange.bind(this)} 
+                  />
+               </div>
+               <div className="mb-4">
+                  <label className="block text-gray-700 text-base font-bold mb-2">
+                     Senha                  
+                  </label>
+                  <input 
+                    className="shadow appeareance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    type="password" name="password" onChange={this.handleChange.bind(this)} 
+                  />
+               </div>
+               <div className="flex items-center justify-between">
+                  <button 
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    onClick={this.handleSubmit}
+                  >
+                     Entrar
+                  </button>
+                  <Link to="/Cadastros"><button className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800">Cadastre-se</button></Link>
+               </div>
+            </div>
          </div>
       );
 

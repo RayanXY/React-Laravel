@@ -9,7 +9,7 @@ class App extends React.Component {
 
    render() {
       return ( 
-         <div>
+         <div className="bg-blue-200">
             <Route exact path="/" component={Login} />
             <Route exact path="/home" component={Home} />
             <Route exact path="/cadastros" component={Cadastros} />
